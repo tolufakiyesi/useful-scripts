@@ -6,17 +6,23 @@ A script to calculate the total cost of all your rides and the total discount yo
 
 - pip install beautifulsoup4
 - sudo apt-get python-lxml
-- Edit the file and replace the email and the email imap configuration with one for your email provider eg `imap.mail.yahoo.com` or `imap.gmail.com`
 
 ## Usage
 
 - Run the script
 
 ```
-$ python index.py
+$ python index.py <your@email.com> <imap.yourmail.com>
 ```
+The imap address for some of the more popular emails include
 
-- Enter your email password into the non displaying input on the terminal when prompted
+* yahoo, rocketmail - imap.mail.yahoo.com
+* gmail - imap.gmail.com
+* hotmail, outlook - imap-mail.outlook.com
+* zoho - imap.zoho.com
+
+
+Enter your email password into the non displaying input on the terminal when prompted
 
 
 ## Updates Required

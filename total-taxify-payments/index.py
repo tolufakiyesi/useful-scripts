@@ -1,8 +1,16 @@
+import sys
 import imaplib, getpass
 from bs4 import BeautifulSoup
 
-mail = imaplib.IMAP4_SSL('imap.mail.yahoo.com') # Replace this!
-mail.login("tolufakiyesi@yahoo.com", getpass.getpass()) #Replace this email
+if len(sys.argv) < 3:
+    print("Error! Email and IMAP configuration is required as command line arguments")
+    exit()
+
+email = sys.argv[1]
+imap_address = sys.argv[2]
+
+mail = imaplib.IMAP4_SSL(imap_address) # Replace this!
+mail.login(email, getpass.getpass())
 mail.select("Inbox") # connect to inbox.
 
 print("Please wait...")
